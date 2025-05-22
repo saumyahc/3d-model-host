@@ -3,47 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3D Model Viewer</title>
-
-  <!-- Import model-viewer from CDN -->
+  <title>3D Model Host</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
   <style>
     body {
-      margin: 0;
-      background: #111;
-      color: white;
       font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      padding: 20px;
+      text-align: center;
     }
-
-    h1 {
-      margin-bottom: 20px;
-    }
-
     model-viewer {
-      width: 90%;
-      height: 80vh;
-      max-width: 800px;
+      width: 400px;
+      height: 400px;
+      margin: 20px auto;
     }
   </style>
 </head>
 <body>
-  <h1>My 3D Model</h1>
-  <model-viewer
-    src="model.glb"
-    alt="A 3D model"
-    auto-rotate
-    camera-controls
-    ar
-    ar-modes="webxr scene-viewer quick-look"
-    shadow-intensity="1"
-    exposure="1"
-    environment-image="neutral"
-  ></model-viewer>
+  <h1>3d-model-host</h1>
+
+  <!-- Embed all your models here -->
+  <model-viewer src="fashion_bethm_3drender.glb" alt="Bethm 3D" auto-rotate camera-controls></model-viewer>
+  <model-viewer src="fashion_dress.glb" alt="Fashion Dress" auto-rotate camera-controls></model-viewer>
+  <model-viewer src="fashion_heel_sandals.glb" alt="Heel Sandals" auto-rotate camera-controls></model-viewer>
+  <model-viewer src="high_fashion_dress.glb" alt="High Fashion Dress" auto-rotate camera-controls></model-viewer>
 </body>
 </html>
